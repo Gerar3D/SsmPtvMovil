@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SsmPtvMovil.Common.Entities
 {
-    public class City
+    public class State
     {
         public int Id { get; set; }
 
@@ -14,9 +14,9 @@ namespace SsmPtvMovil.Common.Entities
         [Required]
         public string Name { get; set; }
 
-        public ICollection<Store> Stores { get; set; }
+        public ICollection<City> Cities { get; set; }
 
-        [DisplayName("Stores Number")]
-        public int StoresNumber => Stores == null ? 0 : Stores.Count;
+        [DisplayName("Cities Number")]
+        public int CitiesNumber => Cities == null ? 0 : Cities.Count;
     }
 }

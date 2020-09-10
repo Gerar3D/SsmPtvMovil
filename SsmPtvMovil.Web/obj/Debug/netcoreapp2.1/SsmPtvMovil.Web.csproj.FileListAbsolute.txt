@@ -36,8 +36,8 @@ D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\SsmPtvMovil.W
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\bin\Debug\netcoreapp2.1\SsmPtvMovil.Common.dll
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\bin\Debug\netcoreapp2.1\SsmPtvMovil.Common.pdb
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\SsmPtvMovil.Web.csproj.CoreCompileInputs.cache
-D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\Cities\Create.cshtml.g.cs
-D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\Cities\Details.cshtml.g.cs
-D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\Cities\Edit.cshtml.g.cs
-D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\Cities\Index.cshtml.g.cs
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_DeleteDialog.cshtml.g.cs
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\Create.cshtml.g.cs
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\Details.cshtml.g.cs
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\Edit.cshtml.g.cs
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\Index.cshtml.g.cs

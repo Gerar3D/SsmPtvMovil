@@ -10,22 +10,22 @@ using SsmPtvMovil.Web.Data;
 
 namespace SsmPtvMovil.Web.Controllers
 {
-    public class CitiesController : Controller
+    public class StatesController : Controller
     {
         private readonly DataContext _context;
 
-        public CitiesController(DataContext context)
+        public StatesController(DataContext context)
         {
             _context = context;
         }
 
-        // GET: Cities
+        // GET: States
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Cities.ToListAsync());
+            return View(await _context.State.ToListAsync());
         }
 
-        // GET: Cities/Details/5
+        // GET: States/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,35 +33,33 @@ namespace SsmPtvMovil.Web.Controllers
                 return NotFound();
             }
 
-            var city = await _context.Cities
+            var state = await _context.State
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (city == null)
+            if (state == null)
             {
                 return NotFound();
             }
 
-            return View(city);
+            return View(state);
         }
 
-        // GET: Cities/Create
+        // GET: States/Create
         public IActionResult Create()
         {
-            return View(new City());
+            return View();
         }
 
-        // POST: Cities/Create
+        // POST: States/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(City city)
+        public async Task<IActionResult> Create(State state)
         {
             if (ModelState.IsValid)
-            {
-
                 try
                 {
-                    _context.Add(city);
+                    _context.Add(state);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
@@ -76,16 +74,10 @@ namespace SsmPtvMovil.Web.Controllers
                         ModelState.AddModelError(string.Empty, dbUpdateException.InnerException.Message);
                     }
                 }
-                catch (Exception exception)
-                {
-                    ModelState.AddModelError(string.Empty, exception.Message);
-                }
-
-            }
-            return View(city);
+                 return View(state);
         }
 
-        // GET: Cities/Edit/5
+        // GET: States/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -93,22 +85,22 @@ namespace SsmPtvMovil.Web.Controllers
                 return NotFound();
             }
 
-            var city = await _context.Cities.FindAsync(id);
-            if (city == null)
+            var state = await _context.State.FindAsync(id);
+            if (state == null)
             {
                 return NotFound();
             }
-            return View(city);
+            return View(state);
         }
 
-        // POST: Cities/Edit/5
+        // POST: States/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, City city)
+        public async Task<IActionResult> Edit(int id, State state)
         {
-            if (id != city.Id)
+            if (id != state.Id)
             {
                 return NotFound();
             }
@@ -117,7 +109,7 @@ namespace SsmPtvMovil.Web.Controllers
             {
                 try
                 {
-                    _context.Update(city);
+                    _context.Update(state);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
@@ -132,16 +124,11 @@ namespace SsmPtvMovil.Web.Controllers
                         ModelState.AddModelError(string.Empty, dbUpdateException.InnerException.Message);
                     }
                 }
-                catch (Exception exception)
-                {
-                    ModelState.AddModelError(string.Empty, exception.Message);
-                }
-
             }
-            return View(city);
+            return View(state);
         }
 
-        // GET: Cities/Delete/5
+        // GET: States/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -149,25 +136,26 @@ namespace SsmPtvMovil.Web.Controllers
                 return NotFound();
             }
 
-            var city = await _context.Cities
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (city == null)
+            var state = await _context.State.FindAsync(id);
+            _context.State.Remove(state);
+            if (state == null)
             {
                 return NotFound();
             }
 
-            _context.Cities.Remove(city);
+            _context.State.Remove(state);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+
         }
 
-        // POST: Cities/Delete/5
+        // POST: States/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-      
-        private bool CityExists(int id)
+        
+        private bool StateExists(int id)
         {
-            return _context.Cities.Any(e => e.Id == id);
+            return _context.State.Any(e => e.Id == id);
         }
     }
 }

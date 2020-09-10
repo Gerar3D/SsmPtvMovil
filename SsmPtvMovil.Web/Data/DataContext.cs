@@ -9,7 +9,11 @@ namespace SsmPtvMovil.Web.Data
         {
         }
 
+        public DbSet<City> States { get; set; }
+
         public DbSet<City> Cities { get; set; }
+
+        public DbSet<City> Stores { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -19,6 +23,16 @@ namespace SsmPtvMovil.Web.Data
             .HasIndex(t => t.Name)
             .IsUnique();
 
+            modelBuilder.Entity<State>()
+            .HasIndex(t => t.Name)
+            .IsUnique();
+
+            modelBuilder.Entity<Store>()
+            .HasIndex(t => t.Name)
+            .IsUnique();
+
         }
+
+        public DbSet<SsmPtvMovil.Common.Entities.State> State { get; set; }
     }
 }
