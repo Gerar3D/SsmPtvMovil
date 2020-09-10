@@ -1,0 +1,9 @@
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\bin\Debug\netstandard2.0\SsmPtvMovil.Common.deps.json
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\bin\Debug\netstandard2.0\SsmPtvMovil.Common.dll
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.csprojAssemblyReference.cache
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.AssemblyInfoInputs.cache
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.AssemblyInfo.cs
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\bin\Debug\netstandard2.0\SsmPtvMovil.Common.pdb
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.csproj.CoreCompileInputs.cache
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.dll
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.pdb
