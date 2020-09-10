@@ -22,7 +22,9 @@ namespace SsmPtvMovil.Web.Controllers
         // GET: States
         public async Task<IActionResult> Index()
         {
-            return View(await _context.State.ToListAsync());
+            return View(await _context.State
+                .Include(c => c.Cities)
+                .ToListAsync());
         }
 
         // GET: States/Details/5
@@ -34,6 +36,8 @@ namespace SsmPtvMovil.Web.Controllers
             }
 
             var state = await _context.State
+                .Include(c => c.Cities)
+                .ThenInclude(d => d.Stores)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (state == null)
             {
@@ -149,13 +153,68 @@ namespace SsmPtvMovil.Web.Controllers
 
         }
 
-        // POST: States/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        
-        private bool StateExists(int id)
+        // GET: City/Add
+        public async Task<IActionResult> AddCity(int? id)
         {
-            return _context.State.Any(e => e.Id == id);
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var state = await _context.State.FindAsync(id);
+            if (state == null)
+            {
+                return NotFound();
+            }
+
+            City model = new City { IdState = state.Id };
+            return View(model);
         }
+
+        // POST: City/Add
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddCity(City city)
+        {
+            if (ModelState.IsValid)
+            {
+
+                State state= await _context.State
+                    .Include(c => c.Cities)
+                    .FirstOrDefaultAsync(c => c.Id == city.IdState);
+                if (state == null)
+                {
+                    return NotFound();
+                }
+
+                try
+                {
+                    city.Id = 0;
+                    state.Cities.Add(city);
+                    _context.Update(state);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction($"{nameof(Details)}/{state.Id}");
+
+                }
+                catch (DbUpdateException dbUpdateException)
+                {
+                    if (dbUpdateException.InnerException.Message.Contains("duplicate"))
+                    {
+                        ModelState.AddModelError(string.Empty, "There are a record with the same name.");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, dbUpdateException.InnerException.Message);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    ModelState.AddModelError(string.Empty, exception.Message);
+                }
+            }
+
+            return View(city);
+        }
+
     }
 }

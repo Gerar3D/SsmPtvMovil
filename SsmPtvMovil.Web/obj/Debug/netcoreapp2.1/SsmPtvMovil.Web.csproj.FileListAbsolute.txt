@@ -41,3 +41,6 @@ D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\S
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\Details.cshtml.g.cs
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\Edit.cshtml.g.cs
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\Index.cshtml.g.cs
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\AddCity.cshtml.g.cs
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\_City.cshtml.g.cs
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Web\obj\Debug\netcoreapp2.1\Razor\Views\States\_State.cshtml.g.cs

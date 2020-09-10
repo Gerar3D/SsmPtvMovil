@@ -7,3 +7,6 @@ D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\bin\Debug\netstandard2.0\SsmPtvMov
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.csproj.CoreCompileInputs.cache
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.dll
 D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.pdb
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\bin\Debug\netstandard2.0\Newtonsoft.Json.dll
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\bin\Debug\netstandard2.0\Newtonsoft.Json.xml
+D:\Servisystem\SsmPtvMovil\SsmPtvMovil.Common\obj\Debug\netstandard2.0\SsmPtvMovil.Common.csproj.CopyComplete

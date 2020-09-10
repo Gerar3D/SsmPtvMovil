@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace SsmPtvMovil.Common.Entities
@@ -18,5 +20,10 @@ namespace SsmPtvMovil.Common.Entities
 
         [DisplayName("Stores Number")]
         public int StoresNumber => Stores == null ? 0 : Stores.Count;
+
+        [JsonIgnore]
+        [NotMapped]
+        public int IdState { get; set; }
+
     }
 }
